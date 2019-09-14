@@ -11,6 +11,6 @@ Howto
 ```config
 method.insert = cfg.pushover.userkey, private|const|string, (cat,"PUSHOVER_USERKEY")
 method.insert = cfg.pushover.apitoken, private|const|string, (cat,"PUSHOVER_TOKEN")
-system.method.set_key = event.download.finished,notify_me,"execute=~/path/to/rtorrent-pushover.sh,$d.get_name="
+system.method.set_key = event.download.finished,notify_me,"execute=~/path/to/rtorrent-pushover.sh,$d.get_name=$cfg.pushover.userkey=,$cfg.pushover.apitoken="
 ```
 
